@@ -11,27 +11,51 @@
 body {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 background-color: #222; /* Dark background color */
-margin: 0;
+/* margin: 0; */
 /* color: #fff; Text color */
 }
 
 /* Header Styles */
 #header {
-background-color: #333; /* Darker background color for header */
-padding: 20px 0; /* Add padding to header */
+ 
+  /* background-color: #0c9ee2; Darker background color for header */
+  /* padding: 20px;  */
+}
+/* Navigation Styles */
+nav {
+  height: min-content;
+  background-color: #029492;
+  /*Darkbackgroundcolor*/
+  color: #ffffff;
+  /*Lighttextcolor*/
+  /* padding: 10px 0; Add padding to header */
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /*Addshadowfordepth*/
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color */
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
 }
 
 .navcontainer {
-max-width: 1200px;
-margin: 0 auto;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 0 20px; /* Adjust padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1200px;
+  /* margin: 4px; */
+  padding: 15px 20px;
 }
 
-
-.logo img {
+.logo {
+  font-weight: bolder;
+        font-size: xx-large;
   height: 40px; /* Adjust the height of the logo as needed */
   width: 40px;
   margin-right: 2rem; /* Add some space between logo and text */
@@ -48,8 +72,9 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #ccc; /* Link color */
-  font-size: 16px; /* Adjust font size */
+  font-weight: bold;
+  color: #ffffff; /* Link color */
+  font-size: 20px; /* Adjust font size */
   transition: color 0.3s ease; /* Smooth transition */
   padding: 10px; /* Add padding to links */
   display: flex; /* Use flexbox to align icon and text */
@@ -112,14 +137,17 @@ main {
 
 aside {
   flex: 1;
-  margin-left: 20px;
+  margin-top: 4rem;
+  /* margin-left: 20px; */
 }
 
 /* Section styles */
 .section {
   margin-bottom: 40px;
 }
-
+#section1{
+  margin-top: 4rem;
+}
 /* Thread styles */
 .thread {
   background-color: #fff;
@@ -384,13 +412,30 @@ aside {
 
  
   .container {
+    font-size: x-small;
+        /* margin-left: -52px; */
+    /* margin-top: 30rem; */
     padding: 0 10px; /* Reduce padding for container */
   }
+  
+form#new-thread-form {
+  width: 95%;
+}
 
-
-
+section.section {
+  width: 90%;
+}
+.footer-content {
+  display: grid;
+  align-content: stretch;
+  
+  justify-items: center;
+  /* justify-content: space-around; */
+}
   .footer-nav {
-    margin-left: -40px; /* Adjust margin for footer navigation */
+    
+    font-size: x-small;
+        margin-left: -52px;
   }
 
   .footer-legal {
@@ -398,6 +443,10 @@ aside {
     margin-top: 20px; /* Adjust margin top for footer legal section */
     text-align: center; /* Center-align text in footer legal section */
   }
+  .footer-nav ul {
+    display: grid;
+    justify-content: center;
+}
 }
 
 
@@ -494,8 +543,13 @@ textarea:focus {
   }
 
   aside {
-    margin-left: 0;
-  }
+    /* width: 57%; */
+    /* margin-left: 0; */
+}
+.forecast-list {
+  display: block;
+  justify-content: space-evenly;
+}
 
   nav {
     padding: 10px;

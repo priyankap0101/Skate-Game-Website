@@ -1,16 +1,16 @@
 /* Reset Styles */
-css * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 /* Global Styles */
 body {
   font-family: Arial, sans-serif;
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
-
 .container {
   margin: auto;
 }
@@ -28,8 +28,8 @@ nav {
   color: #ffffff;
   /*Lighttextcolor*/
   /* padding: 10px 0; Add padding to header */
-  position: fixed;
-  top: 0;
+  /* position: fixed; */
+  /* top: 0; */
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -48,11 +48,14 @@ nav {
   align-items: center;
   justify-content: space-around;
   max-width: 1200px;
-  margin: 4px;
-  padding: 0 20px;
+  margin: 0; /* Remove margin */
+  padding: 16px 20px;
 }
 
-.logo img {
+
+.logo {
+  font-weight: bolder;
+        font-size: xx-large;
   height: 40px; /* Adjust the height of the logo as needed */
   width: 40px;
   margin-right: 2rem; /* Add some space between logo and text */
@@ -119,9 +122,9 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  /* background-color: #180d0d; Fallback color */
-  /* background-image: url("./image/digitalbg.jpg"); */
+  /* min-height: 100vh; */
+  background-color: #000000; 
+  
   background-position: center;
   background-size: cover;
   overflow: hidden; /* Hide overflow content */
@@ -135,6 +138,11 @@ nav ul li a:hover {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+}
+.parallax-container img {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the image behaves as a block element */
 }
 
 .overlay {
@@ -173,14 +181,14 @@ nav ul li a:hover {
 /* CSS for the catchy text */
 .catchy-text {
   position: absolute;
-  top: 40;
-  left: 40%;
+  /* top: 10; */
+  left: 50%;
   transform: translate(-50%, -50%);
   font-family: Arial, sans-serif;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: bolder;
   color: #fff;
-  margin: 0;
+  margin: -2rem;
   padding: 20px;
   overflow: hidden;
 }
@@ -233,7 +241,7 @@ nav ul li a:hover {
 
 #about h2 {
   font-family: "Your Unique Font", sans-serif; /* Use your unique font */
-  text-transform: lowercase; /* Convert text to lowercase */
+  /* text-transform: lowercase; Convert text to lowercase */
   font-size: 2.5rem;
   font-weight: 900;
   color: #ffffff; /* Text color */
@@ -259,6 +267,10 @@ nav ul li a:hover {
   background-attachment: fixed;
   color: #000000; /* Set text color */
 }
+h2.aos-init.aos-animate {
+  margin-bottom: 3rem;
+}
+
 
 #media .container {
   max-width: 1200px;
@@ -544,14 +556,14 @@ h1.purchase-heading.aos-init.aos-animate {
     0
   ); /* Add black background color to the section */
   padding: 30px;
-  height: 50vh;
+  /* height: 50vh; */
   
 }
 
 .community-heading {
   font-size: 2.5rem;
   color: #ffffff;
-  text-align: center;
+  /* text-align: center; */
   margin-bottom: 40px;
   font-size: 2rem;
 }
@@ -563,9 +575,7 @@ h1.purchase-heading.aos-init.aos-animate {
   /* Center align items vertically */
 }
 
-.discord-info h3 {
-  margin-top: 0; /* Remove top margin */
-}
+
 
 .community-image img {
   max-width: 100%; /* Ensure image doesn't exceed container width */
@@ -755,7 +765,7 @@ h1.purchase-heading.aos-init.aos-animate {
 
 /* footer legal */
 .footer-legal {
-  margin-left: 16rem;
+  margin-left: 20rem;
   margin-top: 2rem;
   color: gray;
   height: 6rem;
@@ -796,8 +806,11 @@ h1.purchase-heading.aos-init.aos-animate {
   }
 
   .catchy-text {
-    font-size: 2rem; /* Decrease font size for catchy text */
-  }
+    margin-top: -10rem;
+    width: max-content;
+        font-size: 2rem;
+    }
+  
 
   .parallax-container {
     min-height: 80vh; /* Decrease height of parallax container */
@@ -822,11 +835,28 @@ h1.purchase-heading.aos-init.aos-animate {
   #purchase .container {
     width: 90%; /* Adjust width of container in the purchase section */
   }
-
+  .join-btn {
+    /* margin-left: -19px;
+    padding: 19px 8px; */
+    padding: 9px 5px;
+   
+}
+.discord-info h3 {
+  font-size: small;
+}
+  .footer-content {
+    display: grid;
+    justify-content: center;
+}
   .footer-nav {
+    font-size: x-small;
     margin-left: -40px; /* Adjust margin for footer navigation */
   }
-
+  .footer-nav ul {
+    justify-content: center;
+    display: grid;
+    padding: 0;
+}
   .footer-legal {
     margin-left: 0; /* Reset margin for footer legal section */
     margin-top: 20px; /* Adjust margin top for footer legal section */
@@ -835,6 +865,14 @@ h1.purchase-heading.aos-init.aos-animate {
 }
 @media screen and (max-width: 768px) {
   .parallax-container.videoparallax {
-          margin-top: 20rem;
+          margin-top: -1rem;
   }
+  .community-heading {
+    font-size: 1rem;
+    
+}
+.community-content {
+  padding: 40px 17px
+  /* align-items: center; */
+}
   }
