@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+   
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+         /* Reset Styles */
+css * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+  margin: auto;
+}
+/* Header Styles */
+#header {
+ 
+  background-color: #333; /* Darker background color for header */
+  /* padding: 10px 0; Add padding to header */
+}
+/* Navigation Styles */
+nav {
+  height: min-content;
+  background-color: #292929;
+  /*Darkbackgroundcolor*/
+  color: #ffffff;
+  /*Lighttextcolor*/
+  /* padding: 10px 0; Add padding to header */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /*Addshadowfordepth*/
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color */
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+}
+
+.navcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 4px;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 40px; /* Adjust the height of the logo as needed */
+  width: 40px;
+  margin-right: 2rem; /* Add some space between logo and text */
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ccc; /* Link color */
+  font-size: 16px; /* Adjust font size */
+  transition: color 0.3s ease; /* Smooth transition */
+  padding: 10px; /* Add padding to links */
+  display: flex; /* Use flexbox to align icon and text */
+  align-items: center; /* Center align icon and text */
+}
+
+nav ul li a i {
+  margin-right: 8px; /* Add spacing between icon and text */
+  font-size: 20px; /* Icon size */
+}
+
+nav ul li a:hover {
+  color: #ffd700; /* Hover color */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .navcontainer {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .logo {
+      margin-bottom: 20px;
+  }
+
+  nav {
+      text-align: center;
+  }
+
+  nav ul {
+      display: block;
+      margin-bottom: 20px;
+  }
+
+  nav ul li {
+      display: block;
+      margin: 10px 0;
+  }
+}
+.game-reviews-section {
+    height: 100vh;
+    width: 100vw; /* Set width to cover the entire screen */
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/6468712/pexels-photo-6468712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Replace 'your-background-image.jpg' with your image path */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    height: max-content;
+}
+
+.container .content {
+    max-width: 800px;
+    /* margin: 8rem; Center align the content horizontally */
+    padding: 0 220px; /* Add padding to the content */
+}
+
+.review-h2 {
+    font-size: 4rem;
+    color: #fff;
+    /* margin-left: 36rem; */
+    text-align: center;
+    margin-top: 8rem;
+    -webkit-text-fill-color: #22b895;
+}
+
+.description {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.description p {
+    font-size: 18px;
+    color: #fff;
+    margin-left: 6rem;
+}
+/* Base styles */
+
+/* Your existing CSS */
+
+/* Base styles */
+
+/* Your existing CSS */
+
+
+
+
+    .game-card-section {
+        height: 100dvh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* gap: 20rem; */
+    padding: 20px;
+    margin-top: 8rem;
+}
+
+.game-card {
+    width: 550px;
+    
+    transition: transform 0.3s ease;
+    display: flex; /* Make the card container a flexbox */
+    flex-direction: column; /* Arrange child elements vertically */
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+}
+
+.card-details {
+    /* margin-top: 1rem; */
+    padding: 0px;
+    text-align: center;
+    flex-grow: 1; /* Allow the card details to grow to fill remaining space */
+    display: flex; /* Make the card details a flexbox */
+    flex-direction: column; /* Arrange child elements vertically */
+    justify-content: center; /* Center align child elements vertically */
+}
+
+.card-name {
+    margin-top: 1.5rem;
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: center;
+    
+}
+
+.stars {
+    font-size:xx-large;
+    color: #FFD700;
+    margin-bottom: 10px;
+    display: flex; /* Make the stars a flexbox */
+    justify-content: center; /* Center align stars horizontally */
+}
+
+.stars::before {
+    content: "\2605\2605\2605\2605\2605";
+    letter-spacing: 5px;
+}
+
+.stars[data-rating="1"]::before {
+    content: "\2605\2606\2606\2606\2606";
+}
+
+.stars[data-rating="2"]::before {
+    content: "\2605\2605\2606\2606\2606";
+}
+
+.stars[data-rating="3"]::before {
+    content: "\2605\2605\2605\2606\2606";
+}
+
+.stars[data-rating="4"]::before {
+    content: "\2605\2605\2605\2605\2606";
+}
+
+.stars[data-rating="5"]::before {
+    content: "\2605\2605\2605\2605\2605";
+}
+
+.play-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #0056b3;
+}
+.recent-reviews-section {
+    padding: 50px 0;
+    height: 220vh;
+    background-color: #022852;
+}
+
+/* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+} */
+
+ .recent-review-h2 {
+    font-size: 3rem;
+    /* color: #d61010; */
+  color: white;
+    text-align: center;
+    
+    margin-bottom: 3rem;
+}
+
+.review-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.review-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-details {
+    padding: 20px;
+}
+
+.card-details h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-details p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .background-image {
+        background-position: center center; /* Center the background image */
+    }
+    
+    .review-h2 {
+        margin-top: 40rem; /* Reduce top margin for smaller devices */
+        text-align: center; /* Center align the h2 */
+        display: flex; /* Use flexbox */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 100%; /* Ensure the h2 takes full height of its container */
+    }
+    .game-card-section {
+        height: 200dvh;
+   
+}
+    .recent-reviews-section {
+   
+    height: 320vh;
+   
+}
+    
+}
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-line {
+    height: 2rem;
+    background-color: #000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-links ul li a {
+    color: #a19797;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    color: #f98d12;
+}
+
+.footer-social a {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-bottom .dropdown {
+    margin-left: 20px;
+}
+
+.footer-social a i {
+    color: #ffffff;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover i {
+    transform: scale(1.2);
+}
+
+.footer-nav {
+    text-align: center;
+}
+
+.footer-nav ul {
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+}
+
+.footer-nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-nav select {
+    margin: 0 10px;
+}
+
+.dropdown {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer-nav a {
+    color: grey;
+    text-decoration: none;
+}
+
+.dropdown select {
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.dropdown select:hover {
+    border-color: #999;
+}
+
+/* Footer Legal */
+.footer-legal {
+    margin-left: auto; /* Align to the right on smaller screens */
+    margin-right: auto; /* Align to the left on smaller screens */
+    margin-top: 2rem;
+    color: grey;
+    height: 6rem;
+    text-align: center; /* Center-align the content */
+}
+
+.footer-legal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-legal li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-legal li:last-child {
+    margin-right: 0;
+}
+
+.footer-legal li:nth-child(4),
+.footer-legal li:nth-child(5) {
+    display: block;
+}
+
+
+    </style>
+</head>
+<body>
+
+  <header id="header">
+    <nav>
+      <div class="navcontainer"  data-aos="fade-in" data-aos-duration="1000">
+        <div class="logo">
+          <img src="./image/logo2.png" alt="Skater Republic Logo" />
+          <!-- Add your logo image here -->
+        </div>
+        <ul class="nav-links">
+          <li>
+            <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="./game.html"><i class="fas fa-gamepad"></i> Game</a>
+          </li>
+          <li>
+            <a href="./forums.html"><i class="fas fa-comments"></i> Forums</a>
+          </li>
+          <!-- <li>
+            <a href="./contact.html"
+              ><i class="fas fa-envelope"></i> Contact Us</a
+            >
+          </li> -->
+          <li>
+            <a href="./login.html"
+              ><i class="fas fa-sign-in-alt"></i> Log In</a
+            >
+          </li>
+          <li>
+            <a href="./signup.html"
+              ><i class="fas fa-user-plus"></i> Sign Up</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+
+
+
+      <section class="game-reviews-section">
+        <div class="background-image"></div>
+        <div class="container">
+            <div class="content">
+                <h2 class="review-h2" data-aos="slide-right" data-aos-duration="1000">Game Reviews</h2>
+                <div class="description">
+                    <!-- <p>
+                        Check out our latest game reviews to discover new favorites and find out what's hot in the gaming world.
+                    </p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+    <div class="game-card-section">
+
+        
+    
+          <div class="game-card" data-aos="slide-right" data-aos-duration="1000">
+            <img src="https://cdn.pixabay.com/photo/2020/06/21/21/53/skateboard-5326930_1280.jpg" alt="Chess Master">
+            <h2 class="card-name" data-aos="fade-in" data-aos-duration="4000">Skate Series</h2>
+            <div class="stars" data-rating="2" data-aos="fade-in" data-aos-duration="4000"></div>
+            <p class="description" data-aos="fade-in" data-aos-duration="4000">Developed by EA Black Box, the Skate series offers a more realistic skateboarding experience with its innovative "flick-it" control scheme. Players can perform tricks using the right analog stick, creating a more immersive gameplay experience.</p>
+            
+            <!-- <button class="play-button">Play Now</button> -->
+          </div>
+    
+          <div class="game-card" data-aos="slide-left" data-aos-duration="1000">
+            <img src="https://cdn.pixabay.com/photo/2024/03/05/05/37/ai-generated-8613769_1280.png" alt="Chess Master">
+            <h2 class="card-name" data-aos="fade-in" data-aos-duration="4000">Session</h2>
+            <div class="stars" data-rating="3" data-aos="fade-in" data-aos-duration="4000"></div>
+            <p class="description" data-aos="fade-in" data-aos-duration="4000"> A skateboarding simulation game that focuses on realism and authenticity. Players have precise control over their skateboard, allowing them to perform realistic tricks and create custom skate spots.</p>
+           
+            <!-- <button class="play-button">Play Now</button> -->
+          </div>
+          
+    </div>
+      
+    <div class="game-card-section">
+
+        <div class="game-card" data-aos="slide-right" data-aos-duration="1000">
+            <img src="https://cdn.pixabay.com/photo/2019/04/11/15/24/hockey-4119968_1280.jpg" alt="Chess Master">
+            <h2 class="card-name" data-aos="fade-in" data-aos-duration="4000">Skate or Die Series</h2>
+            <div class="stars" data-rating="4" data-aos="fade-in" data-aos-duration="4000"></div>
+            <p class="description" data-aos="fade-in" data-aos-duration="4000">An old-school series that includes games like Skate or Die and Skate or Die 2: The Search for Double Trouble. These games offer a mix of skateboarding and mini-games, providing a nostalgic experience for players.</p>
+           
+            <!-- <button class="play-button">Play Now</button> -->
+          </div>
+
+          <div class="game-card" data-aos="slide-left" data-aos-duration="1000">
+            <img src="https://cdn.pixabay.com/photo/2017/04/30/22/39/hockey-2274221_1280.jpg" alt="Chess Master">
+            <h2 class="card-name" data-aos="fade-in" data-aos-duration="4000">Tony Hawk's Pro Skater Series</h2>
+            <div class="stars" data-rating="4" data-aos="fade-in" data-aos-duration="4000"></div>
+            <p class="description" data-aos="fade-in" data-aos-duration="4000">This iconic series features various installments, including Tony Hawk's Pro Skater, Tony Hawk's Pro Skater 2, and so on. Players can perform tricks, complete objectives, and explore skateboarding environments.</p>
+          
+            <!-- <button class="play-button">Play Now</button> -->
+          </div>
+    </div>
+
+
+    <section class="recent-reviews-section"  >
+        
+        <div class="container" >
+            <h2 class="recent-review-h2" data-aos="fade-in" data-aos-duration="4000">Recent Reviews</h2>
+            <div class="review-cards">
+                <div class="review-card" data-aos="fade-in" data-aos-duration="4000">
+                    <img src="https://cdn.pixabay.com/photo/2016/09/20/21/45/skating-1683500_1280.jpg" alt="Skate Game 1">
+                    <div class="card-details">
+                        <h3>Radical Ramps</h3>
+                        <p>Radical Ramps is an adrenaline-fueled skateboarding game featuring extreme stunts and insane challenges. Conquer the most daring ramps and show off your skills.</p>
+                    </div>
+                </div>
+                <div class="review-card" data-aos="fade-in" data-aos-duration="4000">
+                    <img src="https://cdn.pixabay.com/photo/2022/08/22/11/04/skate-7403432_1280.jpg" alt="Skate Game 2">
+                    <div class="card-details" >
+                        <h3>Grind City</h3>
+                        <p>Grind City is a vibrant skateboarding adventure set in an urban metropolis. Explore the city streets, perform epic grinds, and discover hidden spots.</p>
+                    </div>
+                </div>
+                <div class="review-card" data-aos="fade-in" data-aos-duration="4000">
+                    <img src="https://cdn.pixabay.com/photo/2020/02/27/03/46/boy-4883333_1280.jpg" alt="Skate Game 3">
+                    <div class="card-details">
+                        <h3>Thrashville</h3>
+                        <p>Thrashville is a hardcore skateboarding game set in a gritty urban environment. Push your skills to the limit as you navigate through challenging obstacles and obstacles.</p>
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+    </section>
+    
+
+<!-- footer -->
+  
+<div class="footer-line"></div>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <ul>
+        <li><a href="#" ">Home</a></li>
+        <li><a href="#" >Insider</a></li>
+        <li><a href="#" >FAQ</a></li>
+        <li><a href="#">Reel</a></li>
+      </ul>
+    </div>
+    <div class="footer-social" id="social">
+      <a href="#"><i class="fa-brands fa-facebook" ></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter" ></i></a>
+      <a href="#"><i class="fa-brands fa-instagram" ></i></a>
+      <a href="#"><i class="fa-brands fa-discord" ></i></a>
+    </div>
+  </div>
+  <!-- <div class="footer-line"></div> -->
+  
+</footer>
+
+<div class="footer-bottom">
+  <div class="footer-nav">
+    <ul>
+      <li><a href="#" >Browse Games</a></li>
+      <li><a href="#" >Latest News</a></li>
+      <li><a href="#" >Help Center</a></li>
+      <li><a href="#" >EA Forums</a></li>
+      <li><a href="#" >About Us</a></li>
+      <li class="dropdown">
+        <select name="country"  ">
+             <option value="in" ">India</option>
+            <option value="uk" >United Kingdom</option>
+          <!-- Add more options as needed -->
+        </select>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="footer-legal">
+  <ul>
+    <li >Legal & Privacy</li>
+    <li >Online Service Updates</li>
+    <li>User Agreement</li>
+    <div class="box">
+      <li >Privacy & Cookie Policy (Your Privacy Rights)</li>
+      <li >Cookie Preferences</li>
+    </div>
+    <li data-aos="fade-up" >© 2024 Electronic Arts Inc.</li>
+  </ul>
+</div>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+    <script>
+        document.querySelectorAll('.game-card').forEach(function(card) {
+  const stars = card.querySelector('.stars');
+  const rating = parseInt(stars.dataset.rating);
+  stars.dataset.rating = rating; // Ensure that the rating is correctly set
+  
+  const playButton = card.querySelector('.play-button');
+  playButton.addEventListener('click', function() {
+    alert("You are about to play: " + card.querySelector('.card-name').innerText);
+    // Add actual code to start the game here
+  });
+});
+
+    </script>
+</body>
+</html>

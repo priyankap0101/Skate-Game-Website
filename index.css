@@ -1,0 +1,840 @@
+/* Reset Styles */
+css * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+  margin: auto;
+}
+/* Header Styles */
+#header {
+ 
+  background-color: #0c9ee2; /* Darker background color for header */
+  /* padding: 10px 0; Add padding to header */
+}
+/* Navigation Styles */
+nav {
+  height: min-content;
+  background-color: #029492;
+  /*Darkbackgroundcolor*/
+  color: #ffffff;
+  /*Lighttextcolor*/
+  /* padding: 10px 0; Add padding to header */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /*Addshadowfordepth*/
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color */
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+}
+
+.navcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 4px;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 40px; /* Adjust the height of the logo as needed */
+  width: 40px;
+  margin-right: 2rem; /* Add some space between logo and text */
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff; /* Link color */
+  font-size: 20px; /* Adjust font size */
+  transition: color 0.3s ease; /* Smooth transition */
+  padding: 10px; /* Add padding to links */
+  display: flex; /* Use flexbox to align icon and text */
+  align-items: center; /* Center align icon and text */
+}
+
+nav ul li a i {
+  margin-right: 8px; /* Add spacing between icon and text */
+  font-size: 20px; /* Icon size */
+}
+
+nav ul li a:hover {
+  color: #ffd700; /* Hover color */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  .navcontainer {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .logo {
+      margin-bottom: 20px;
+  }
+
+  nav {
+      text-align: center;
+  }
+
+  nav ul {
+      display: block;
+      margin-bottom: 20px;
+  }
+
+  nav ul li {
+      display: block;
+      margin: 10px 0;
+  }
+}
+
+/* Parallax Scrolling Effect */
+.parallax-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* background-color: #180d0d; Fallback color */
+  /* background-image: url("./image/digitalbg.jpg"); */
+  background-position: center;
+  background-size: cover;
+  overflow: hidden; /* Hide overflow content */
+}
+
+.parallax-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.5); Add semi-transparent overlay */
+}
+
+.content {
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+.buffer {
+  width: 100%;
+
+  background-color: #ffffff; /* Fallback color */
+  background-image: url("./image/19.simple-black-abstract-gradient-geometric-260nw-1416806981.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.parallax-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  /* Fallback color */
+  /* background-image: url("./image/Abstract-blue-neon-rays-background-_HD_BG.webp"); */
+  background-position: center;
+  background-size: cover;
+}
+/* CSS for the catchy text */
+.catchy-text {
+  position: absolute;
+  top: 40;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: bolder;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.catchy-text::before {
+  content: attr(data-text); /* Use the data-text attribute content */
+  position: absolute;
+  /* width: 50%; */
+  height: 100%;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  color: transparent; /* Make text transparent initially */
+  display: inline-block;
+  animation: typing 4s steps(40) infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0; /* Start with width 0 */
+    color: transparent; /* Make text transparent */
+  }
+  to {
+    /* width: 100%;  */
+    /* Move to full width */
+    color: #fff; /* Change text color to white */
+  }
+}
+
+/* CSS for typewriter animation */
+
+/* Other styles remain unchanged */
+
+/* about */
+#about {
+  background-color: #ffffff; /* Set background color to white */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  height: 100vh; /* Set the height of the section to 100% of the viewport height */
+  
+  color: #000000; /* Set text color to black */
+}
+
+#about .container {
+  background-color: #037fb1; /* Set background color to light blue */
+  width: 40%; /* Set the width of the container */
+  border: 2px solid #ffffff; /* Add border around the container */
+  padding: 20px; /* Add padding inside the container */
+}
+
+#about h2 {
+  font-family: "Your Unique Font", sans-serif; /* Use your unique font */
+  text-transform: lowercase; /* Convert text to lowercase */
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff; /* Text color */
+  margin-bottom: 30px; /* Add some space below the heading */
+}
+
+#about p {
+  display: block; /* Display paragraph as a block */
+  font-family: Arial, sans-serif; /* Default font family */
+  font-size: 1em; /* Adjust font size */
+  color: #ffffff; /* Text color */
+  padding: 10px; /* Add padding to create square indentation */
+}
+
+
+/* media */
+
+#media {
+  background-color: white;
+  position: relative;
+  /* background-image: url("./image/glowing-triangle-neon-4k_1669770373.jpg.webp"); Set your background image URL */
+  background-size: cover;
+  background-attachment: fixed;
+  color: #000000; /* Set text color */
+}
+
+#media .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.media-content {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.media-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.media-item {
+  width: 100%; /* Ensure all items have the same width */
+}
+
+.media-item img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.media-item p {
+  margin-top: 10px;
+}
+
+.media-item {
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+}
+
+.media-item:hover {
+  transform: translateY(-5px); /* Move the item up slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on hover */
+}
+
+#news {
+  height: auto;
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark text color */
+  padding: 80px 0;
+}
+
+#news .parallax-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#news .container {
+  max-width: 800px;
+}
+
+#news .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#news .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px; /* Increased gap between cards */
+}
+
+#news .card {
+      margin-bottom: 4rem;
+  padding: 30px;
+  background-color: #f5f5f5; /* Light gray background for cards */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#news .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Slightly darker shadow on hover */
+}
+
+#news .card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #047ba5; /* Blue heading color */
+}
+
+#news .card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555555; /* Dark gray text color */
+}
+
+
+#purchase {
+  background-color: white;
+  padding: 84px;
+  color: #000000;
+}
+
+.purchase-heading {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.purchase-container {
+  max-width: 800px;
+  margin: 0 auto; /* Center the container */
+  overflow: hidden; /* Clear floats */
+}
+
+.purchase-title {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.purchase-details {
+  float: left;
+  width: 48%;
+  margin-right: 4%; /* Adjust margin between columns */
+}
+
+.digital-edition {
+  float: left;
+  width: 48%;
+}
+
+@media screen and (max-width: 768px) {
+  .purchase-details,
+  .digital-edition {
+    float: none; /* Remove float for small devices */
+    width: 100%; /* Set width to 100% for full width */
+    margin-right: 0; /* Remove margin for small devices */
+    margin-bottom: 30px; /* Add some space between sections */
+  }
+}
+
+.purchase-details h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.purchase-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.purchase-form label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.purchase-form select,
+.purchase-form button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 14px;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Adjusted width to 100% */
+}
+
+.purchase-form select:hover,
+.purchase-form select:focus {
+  border-color: #007bff; /* Change border color on hover/focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow on hover/focus */
+}
+
+.purchase-form select:focus {
+  background-color: transparent; /* Set background color to transparent on focus */
+}
+
+.purchase-form select option {
+  background-color: #333333; /* Dark grey background color */
+  color: #ffffff; /* White text color */
+  font-size: 16px; /* Font size */
+  padding: 10px 15px; /* Padding around each option */
+}
+
+.purchase-form select option:hover {
+  background-color: #8a2be2; /* Purple background color on hover */
+  color: #ffffff; /* White text color on hover */
+}
+
+.blackboard {
+  background-color: #000000;
+  padding: 38px;
+  border-radius: 33px;
+  overflow: hidden;
+  position: relative;
+  height: 15rem;
+}
+
+.blackboard:hover {
+  box-shadow: 2px 2px 2px 2px rgba(0, 123, 255, 0.5);
+  cursor: pointer;
+}
+
+.text-overlay {
+  text-align: center;
+  color: #fff;
+  animation: slideIn 1s ease forwards; /* Slide in animation */
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-overlay h2 {
+  font-size: 24px;
+  margin-bottom: 10px; /* Adjust spacing between elements */
+}
+
+.text-overlay h3 {
+  font-size: 18px;
+  margin-top: 3rem; /* Adjust spacing between elements */
+}
+
+.blue-line {
+  width: 144px;
+  border: 1px solid #007bff;
+  margin: 10px auto; /* Center the blue line and add spacing */
+}
+
+.purchase-form button {
+  margin-top: 34px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.purchase-form button:hover {
+  background-color: rgb(32, 193, 211);
+}
+
+h1.purchase-heading.aos-init.aos-animate {
+  color: black;
+ 
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  font-weight: 900;
+  display: block; /* Make it a block-level element */
+}
+/* community */
+.community-section {
+  background-color: rgb(
+    0,
+    0,
+    0
+  ); /* Add black background color to the section */
+  padding: 30px;
+  height: 50vh;
+  
+}
+
+.community-heading {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.community-content {
+  display: flex; /* Use flexbox to position elements side by side */
+  justify-content: space-evenly; /* Space between elements */
+  /* align-items: center;  */
+  /* Center align items vertically */
+}
+
+.discord-info h3 {
+  margin-top: 0; /* Remove top margin */
+}
+
+.community-image img {
+  max-width: 100%; /* Ensure image doesn't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.join-btn:hover {
+  background-color: #10b2ed; /* Darker background color on hover */
+}
+
+/* Styles for the Discord icon */
+.join-btn i {
+  margin-right: 10px; /* Add space between the icon and text */
+}
+
+/* Styles for h3 */
+.discord-info h3 {
+  color: orange; /* Light black color */
+  margin-top: 20px; /* Add space between h2 and h3 */
+}
+
+/* Styles for the button */
+.join-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0049a8; /* Black background color */
+  color: #ffffff; /* White text color */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.join-btn:hover {
+  transform: scale(1.1); /* Scale the button on hover */
+}
+
+.community-image {
+  width: 300px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  overflow: hidden; /* Hide overflow content */
+  position: relative; /* Positioning for pseudo-element */
+}
+
+.image {
+  width: 100%; /* Ensure the image fills its container */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-radius: 50%; /* Create circular shape */
+  position: relative; /* Ensure stacking context */
+  z-index: 1; /* Ensure image is on top of pseudo-element */
+}
+
+.community-image::before {
+  content: ""; /* Create pseudo-element */
+  position: absolute; /* Positioning for pseudo-element */
+  top: 0;
+  left: 50%; /* Position pseudo-element to the right */
+  width: 200%; /* Double the width of the container */
+  height: 100%; /* Maintain height of the container */
+  background-color: black; /* Set background color */
+  border-radius: 50%; /* Create circular shape */
+  transform: translateX(-50%); /* Center the pseudo-element horizontally */
+  z-index: 0; /* Ensure pseudo-element is behind the image */
+}
+
+/* foooter */
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-line {
+  height: 2rem;
+  background-color: #000;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-links ul li a {
+  color: #a19797; /* Change to the color you want */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-links ul li a:hover {
+  color: #f98d12; /* Change to the hover color you want */
+}
+
+.footer-social a {
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  display: conte;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-bottom .dropdown {
+  margin-left: 20px;
+}
+
+.footer-social a i {
+  color: #ffffff; /* Default color */
+  font-size: 24px; /* Set the font size of the icons */
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.footer-social a:hover i {
+  /* Change to your desired color on hover */
+  transform: scale(1.2); /* Scale the icon to 120% on hover */
+}
+.footer-nav ul {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  margin-right: 20px; /* Add spacing between list items */
+}
+
+.footer-nav li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+.footer-nav {
+  text-align: center; /* Center-align the content */
+}
+
+.footer-nav ul {
+  display: inline-block; /* Display the list items inline */
+  padding: 0;
+}
+
+.footer-nav li {
+  display: inline; /* Display the list items inline */
+  margin: 0 10px; /* Add some margin between the list items */
+}
+
+.footer-nav select {
+  margin: 0 10px; /* Add margin to the dropdown */
+}
+
+.dropdown {
+  display: inline-block; /* Display the dropdown inline */
+  vertical-align: middle; /* Align the dropdown vertically */
+}
+.footer-nav a {
+  color: grey; /* Change the color to red */
+  text-decoration: none; /* Remove underline */
+}
+.dropdown select {
+  border: 1px solid #ccc; /* Add gray border */
+  padding: 5px; /* Add padding */
+  font-size: 16px; /* Adjust font size */
+  border-radius: 5px; /* Add border radius */
+  background-color: #fff; /* Set background color */
+}
+
+.dropdown select:hover {
+  border-color: #999; /* Change border color on hover */
+}
+
+/* footer legal */
+.footer-legal {
+  margin-left: 16rem;
+  margin-top: 2rem;
+  color: gray;
+  height: 6rem;
+}
+.footer-legal ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+}
+
+.footer-legal li {
+  display: inline-block; /* Display items in the same line */
+  margin-right: 10px; /* Add space between items */
+}
+
+.footer-legal li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+.footer-legal li:nth-child(4),
+.footer-legal li:nth-child(5) {
+  display: block; /* Display spans in a new line */
+}
+
+
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .nav-links li {
+    margin-right: 10px; /* Reduce margin between navigation links */
+  }
+
+  .nav-links li:last-child {
+    margin-right: 20px; /* Restore margin for the last navigation link */
+  }
+
+  .nav-links li a {
+    font-size: 16px; /* Decrease font size for navigation links */
+  }
+
+  .catchy-text {
+    font-size: 2rem; /* Decrease font size for catchy text */
+  }
+
+  .parallax-container {
+    min-height: 80vh; /* Decrease height of parallax container */
+  }
+
+  .container {
+    padding: 0 10px; /* Reduce padding for container */
+  }
+
+  #about .container {
+    width: 80%; /* Adjust width of container in the about section */
+  }
+
+  #media .container {
+    width: 90%; /* Adjust width of container in the media section */
+  }
+
+  #news .container {
+    width: 90%; /* Adjust width of container in the news section */
+  }
+
+  #purchase .container {
+    width: 90%; /* Adjust width of container in the purchase section */
+  }
+
+  .footer-nav {
+    margin-left: -40px; /* Adjust margin for footer navigation */
+  }
+
+  .footer-legal {
+    margin-left: 0; /* Reset margin for footer legal section */
+    margin-top: 20px; /* Adjust margin top for footer legal section */
+    text-align: center; /* Center-align text in footer legal section */
+  }
+}
+@media screen and (max-width: 768px) {
+  .parallax-container.videoparallax {
+          margin-top: 20rem;
+  }
+  }

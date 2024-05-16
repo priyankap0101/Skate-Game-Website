@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forum</title>
+    <link rel="stylesheet" href="./forum.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-J9wMX9I5kOvuWYXR5F7O7kGw5hJLXLGJj7z2vRpxJwb8P/iK+RUexNt+ZMkO3sQxuw/S1MWG1pG7Xv2jwLDP4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div class="navcontainer">
+        <div class="logo">
+          <img src="./image/logo2.png" alt="Skater Republic Logo" />
+          <!-- Add your logo image here -->
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li>
+              <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="./game.html"><i class="fas fa-gamepad"></i> Game</a>
+            </li>
+            <li>
+              <a href="./forums.html"><i class="fas fa-comments"></i> Forums</a>
+            </li>
+            <!-- <li>
+              <a href="./contact.html"
+                ><i class="fas fa-envelope"></i> Contact Us</a
+              >
+            </li> -->
+            <li>
+              <a href="./login.html"
+                ><i class="fas fa-sign-in-alt"></i> Log In</a
+              >
+            </li>
+            <li>
+              <a href="./signup.html"
+                ><i class="fas fa-user-plus"></i> Sign Up</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <main>
+        <section id="section1" class="section">
+          <h2><i class="fas fa-edit createthredicon"></i></h2>
+          <div id="thread-list"></div>
+          <form id="new-thread-form">
+            <input
+              type="text"
+              id="thread-title"
+              placeholder="Thread Title"
+              required
+            />
+            <textarea
+              id="thread-content"
+              placeholder="Thread Content"
+              required
+            ></textarea>
+            <button type="submit" class="create-thread-btn">
+              <i class="fas fa-plus"></i> Create Thread
+            </button>
+          </form>
+        </section>
+        <!-- Other sections can be added similarly -->
+
+        <section class="section">
+          <div class="thread">
+            <h3>RadicalSk8: Revolution</h3>
+            <p>
+              Explore the latest skateboarding sensation sweeping the gaming
+              world!
+            </p>
+            <div class="author-info">
+              <i class="fas fa-user"></i>
+              <span>SkateMaster789</span>
+            </div>
+            <button class="delete-thread-btn">Follow</button>
+          </div>
+
+          <div class="thread">
+            <h3>RadRollers: Urban Skaters</h3>
+            <p>Embark on an urban skating adventure like never before!</p>
+            <div class="author-info">
+              <i class="fas fa-user"></i>
+              <span>gamer234</span>
+            </div>
+
+            <button class="delete-thread-btn">Follow</button>
+          </div>
+
+          <div class="thread">
+            <h3>SkateJam: Thrill of the Ride</h3>
+            <p>
+              Experience the adrenaline rush of pulling off jaw-dropping tricks
+              in SkateJam!
+            </p>
+            <div class="author-info">
+              <i class="fas fa-user"></i>
+              <span>SkaterPro99</span>
+            </div>
+            <button class="delete-thread-btn">Follow</button>
+          </div>
+
+          <!-- Add more pre-posted threads as needed -->
+        </section>
+      </main>
+
+      <aside>
+        <div class="card" style="background-color: #4e6bff">
+          <h2 id="forecast-heading">Upcoming Live</h2>
+          <ul class="forecast-list">
+            <li>
+              <span class="forecast-title">SkateBros</span> <br />
+              <span class="forecast-time">May 10, 2024, 3:00 PM</span> <br />
+              <button class="set-reminder-btn">Set Reminder</button>
+            </li>
+            <li>
+              <span class="forecast-title">RadRollers (ETH)</span> <br />
+              <span class="forecast-time">May 12, 2024, 2:30 PM</span><br />
+              <button class="set-reminder-btn">Set Reminder</button>
+            </li>
+
+            <!-- Add more forecast items as needed -->
+          </ul>
+          <div class="card">
+            <h2>🔥 Trending Topics</h2>
+            <ul class="topics-list">
+              <li>#SkateBrosStreetFury</li>
+              <li>#RadRollersUrban</li>
+              <li>#RadicalSk8Revolution</li>
+              <li>#RadRollerSkaters</li>
+            </ul>
+          </div>
+          <div class="card skategame-card">
+            <h2>Trending Skate Games</h2>
+            <div class="skate-game">
+              <!-- <img src="./image/sketch.jpg" alt="Skate Game 1"> -->
+              <div class="skate-game-info">
+                <h3>SkateBros: Street Fury</h3>
+                <p>Platform: PC, PS5, Xbox Series X</p>
+                <p>Price: $59.99</p>
+                <p>Release Date: May 2024</p>
+              </div>
+            </div>
+            <div class="skate-game">
+              <!-- <img src="./image/sket4.jpg" alt="Skate Game 2"> -->
+              <div class="skate-game-info">
+                <h3>RadRollers: Urban Shredders</h3>
+                <p>Platform: Nintendo Switch</p>
+                <p>Price: $49.99</p>
+                <p>Release Date: June 2024</p>
+              </div>
+            </div>
+
+            <!-- Add more tokens as needed -->
+          </div>
+          <div class="card">
+            <h2>Recommended Accounts</h2>
+            <div class="account">
+              <img src="./image/prof pic/6.jpg" alt="Account 1" />
+              <div class="account-info">
+                <h3>Jhon</h3>
+              </div>
+              <button class="follow-btn">Follow</button>
+            </div>
+            <div class="account">
+              <img src="./image/prof pic/4.jpg" alt="Account 2" />
+              <div class="account-info">
+                <h3>David</h3>
+              </div>
+              <button class="follow-btn">Follow</button>
+            </div>
+            <!-- Add more accounts as needed -->
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- footer -->
+  
+    <div class="footer-line"></div>
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-links">
+            <ul>
+              <li><a href="#" data-aos="fade-up" data-aos-duration="1000">Home</a></li>
+              <li><a href="#" data-aos="fade-up" data-aos-duration="1000">Insider</a></li>
+              <li><a href="#" data-aos="fade-up" data-aos-duration="1000">FAQ</a></li>
+              <li><a href="#" data-aos="fade-up" data-aos-duration="1000">Reel</a></li>
+            </ul>
+          </div>
+          <div class="footer-social" id="social">
+            <a href="#"><i class="fa-brands fa-facebook" data-aos="fade-up" data-aos-duration="1000"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter" data-aos="fade-up" data-aos-duration="1000"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" data-aos="fade-up" data-aos-duration="1000"></i></a>
+            <a href="#"><i class="fa-brands fa-discord" data-aos="fade-up" data-aos-duration="1000"></i></a>
+          </div>
+        </div>
+        <!-- <div class="footer-line"></div> -->
+        
+      </footer>
+  
+      <div class="footer-bottom">
+        <div class="footer-nav">
+          <ul>
+            <li><a href="#" data-aos="fade-up" data-aos-duration="1000">Browse Games</a></li>
+            <li><a href="#" data-aos="fade-up" data-aos-duration="1000">Latest News</a></li>
+            <li><a href="#" data-aos="fade-up" data-aos-duration="1000">Help Center</a></li>
+            <li><a href="#" data-aos="fade-up" data-aos-duration="1000">EA Forums</a></li>
+            <li><a href="#" data-aos="fade-up" data-aos-duration="1000">About Us</a></li>
+            <li class="dropdown">
+              <select name="country" data-aos="fade-up" data-aos-duration="1000">
+                <option value="in" data-aos="fade-up" data-aos-duration="1000">India</option>
+                <option value="uk" data-aos="fade-up" data-aos-duration="1000">United Kingdom</option>
+                <!-- Add more options as needed -->
+              </select>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div class="footer-legal">
+        <ul>
+          <li data-aos="fade-up" data-aos-duration="1000">Legal & Privacy</li>
+          <li data-aos="fade-up" data-aos-duration="1000">Online Service Updates</li>
+          <li data-aos="fade-up" data-aos-duration="1000">User Agreement</li>
+          <div class="box">
+            <li data-aos="fade-up" data-aos-duration="1000">Privacy & Cookie Policy (Your Privacy Rights)</li>
+            <li data-aos="fade-up" data-aos-duration="1000">Cookie Preferences</li>
+          </div>
+          <li data-aos="fade-up" data-aos-duration="1000">© 2024 Electronic Arts Inc.</li>
+        </ul>
+      </div> -->
+
+    <!-- JavaScript code -->
+    <script>
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const threadList = document.getElementById("thread-list");
+        const newThreadForm = document.getElementById("new-thread-form");
+
+        newThreadForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          const title = document.getElementById("thread-title").value;
+          const content = document.getElementById("thread-content").value;
+          const newThread = createThread(title, content);
+          newThreadForm.insertAdjacentElement("afterend", newThread); // Insert the new thread after the form
+          newThreadForm.reset();
+        });
+
+        function createThread(title, content) {
+          const thread = document.createElement("div");
+          thread.classList.add("thread");
+          thread.innerHTML = `
+            <h3><i class="fas fa-comments"></i> ${title}</h3>
+            <p>${content}</p>
+            <button class="reply-btn"><i class="fas fa-reply"></i> Reply</button>
+            <div class="comments"></div>
+        `;
+
+          const replyBtn = thread.querySelector(".reply-btn");
+          replyBtn.addEventListener("click", function () {
+            const commentTextBox = document.createElement("input");
+            commentTextBox.setAttribute("type", "text");
+            commentTextBox.setAttribute("placeholder", "Enter your comment");
+            commentTextBox.style.marginTop = "10px"; // Apply margin top
+
+            const submitBtn = document.createElement("button");
+            submitBtn.textContent = "Submit";
+            submitBtn.classList.add("submit-btn"); // Add a class to the submit button
+
+            submitBtn.addEventListener("click", function () {
+              const comment = commentTextBox.value.trim();
+              if (comment !== "") {
+                addComment(thread, comment);
+                commentTextBox.remove();
+                submitBtn.remove();
+              }
+            });
+            thread.appendChild(commentTextBox);
+            thread.appendChild(submitBtn);
+          });
+
+          return thread; // Return the created thread
+        }
+
+        function addComment(thread, comment) {
+          const commentsSection = thread.querySelector(".comments");
+          const commentDiv = document.createElement("div");
+          commentDiv.classList.add("comment");
+          commentDiv.innerHTML = `<i class="fas fa-comment"></i> ${comment}`;
+          commentsSection.appendChild(commentDiv);
+        }
+      });
+    </script>
+    <script src="./forum.js"></script>
+
+    <!-- Include Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </body>
+</html>
