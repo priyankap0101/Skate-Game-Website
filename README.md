@@ -15,3 +15,7 @@ This repository contains the code for the Skate Game Website, providing players 
 - **CSS**
 - **JavaScript**
 
+
+
+## Deployed Link
+- **Check out the live website at https://skategameweb.netlify.app/.**
